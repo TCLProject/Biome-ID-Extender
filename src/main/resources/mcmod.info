@@ -1,0 +1,15 @@
+[
+	{
+    "modid": "biomeidextender",
+    "name": "Biome ID Extender",
+    "description": "Extends the biome ID limit. Has limitations (read curseforge description).",
+    "version": "1.0a",
+    "mcversion": "1.7.10",
+    "updateUrl": "",
+    "authorList": ["TCLProject"],
+    "credits": "fewizz for original code upon which I could expand, great thanks",
+    "logoFile": "logo.png",
+    "screenshots": [],
+    "dependencies": []
+	}
+]
