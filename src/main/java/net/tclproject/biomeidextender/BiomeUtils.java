@@ -49,7 +49,7 @@ public class BiomeUtils {
       short[] shortArray = new short[256];
 
       for(int i = 0; i < 256; ++i) {
-         shortArray[i] = (short)byteArray[i];
+         shortArray[i] = byteArray[i];
       }
 
       return shortArray;
@@ -79,6 +79,7 @@ public class BiomeUtils {
    }
 
    public static void setBlockData(ExtendedBlockStorage ebs, byte[] data, int offset) {
+      ShortBuffer.wrap(get(ebs)).put(ByteBuffer.wrap(data, offset, 8192).asShortBuffer());
       ShortBuffer.wrap(get(ebs)).put(ByteBuffer.wrap(data, offset, 8192).asShortBuffer());
    }
 
