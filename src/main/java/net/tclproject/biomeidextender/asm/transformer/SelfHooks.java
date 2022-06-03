@@ -14,18 +14,11 @@ import net.tclproject.biomeidextender.asm.Name;
 
 public class SelfHooks implements IClassNodeTransformer {
    public void transform(ClassNode cn, boolean obfuscated) {
-      MethodNode method;
-      method = AsmUtil.findMethod(cn, "getBiomeShortArray");
-      this.transformGetArray(cn, method);
-      method = AsmUtil.findMethod(cn, "setBiomeShortArray");
-      this.transformSetArray(cn, method);
-
-      method = AsmUtil.findMethod(cn, "get");
-      this.transformGet(cn, method);
-      method = AsmUtil.findMethod(cn, "setBlockRefCount");
-      this.transformSetBlockRefCount(cn, method, obfuscated);
-      method = AsmUtil.findMethod(cn, "setTickRefCount");
-      this.transformSetTickRefCount(cn, method, obfuscated);
+      this.transformGetArray(cn, AsmUtil.findMethod(cn, "getBiomeShortArray"));
+      this.transformSetArray(cn, AsmUtil.findMethod(cn, "setBiomeShortArray"));
+      this.transformGet(cn, AsmUtil.findMethod(cn, "get"));
+      this.transformSetBlockRefCount(cn, AsmUtil.findMethod(cn, "setBlockRefCount"), obfuscated);
+      this.transformSetTickRefCount(cn, AsmUtil.findMethod(cn, "setTickRefCount"), obfuscated);
    }
 
    private void transformGetArray(ClassNode cn, MethodNode method) {

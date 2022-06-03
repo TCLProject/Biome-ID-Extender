@@ -7,21 +7,21 @@ import org.objectweb.asm.tree.MethodNode;
 
 public enum Name {
    hooks("net/tclproject/biomeidextender/BiomeUtils"),
-   hooks_fromShortToByteArray(hooks, "fromShortToByteArray", (String)null, (String)null, "([S)[B"),
-   hooks_readBiomeArrayFromPacket(hooks, "readBiomeArrayFromPacket", (String)null, (String)null, "(Lnet/minecraft/world/chunk/Chunk;[BI)I"),
-   hooks_writeBiomeArrayToPacket(hooks, "writeBiomeArrayToPacket", (String)null, (String)null, "(Lnet/minecraft/world/chunk/Chunk;[BI)I"),
-   hooks_getBiomeArray(hooks, "getBiomeArray", (String)null, (String)null, "(Lnet/minecraft/world/chunk/Chunk;)[B"),
-   hooks_setBiomeArray(hooks, "setBiomeArray", (String)null, (String)null, "([B)[S"),
-   hooks_create16BArray(hooks, "create16BArray", (String)null, (String)null, "()[S"),
-   hooks_getBlockData(hooks, "getBlockData", (String)null, (String)null, "(Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;)[B"),
-   hooks_setBlockData(hooks, "setBlockData", (String)null, (String)null, "(Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;[BI)V"),
-   hooks_writeChunkBiomeArrayToNbt(hooks, "writeChunkBiomeArrayToNbt", (String)null, (String)null, "(Lnet/minecraft/world/chunk/Chunk;Lnet/minecraft/nbt/NBTTagCompound;)V"),
-   hooks_readChunkBiomeArrayFromNbt(hooks, "readChunkBiomeArrayFromNbt", (String)null, (String)null, "(Lnet/minecraft/world/chunk/Chunk;Lnet/minecraft/nbt/NBTTagCompound;)V"),
-   hooks_writeChunkToNbt(hooks, "writeChunkToNbt", (String)null, (String)null, "(Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;)V"),
-   hooks_readChunkFromNbt(hooks, "readChunkFromNbt", (String)null, (String)null, "(Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;Lnet/minecraft/nbt/NBTTagCompound;)V"),
-   hooks_getBlockId(hooks, "getBlockId", (String)null, (String)null, "(Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;III)I"),
-   hooks_getBlockById(hooks, "getBlock", (String)null, (String)null, "(Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;III)Lnet/minecraft/block/Block;"),
-   hooks_setBlockId(hooks, "setBlockId", (String)null, (String)null, "(Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;IIII)V"),
+   hooks_fromShortToByteArray(hooks, "fromShortToByteArray", null, null, "([S)[B"),
+   hooks_readBiomeArrayFromPacket(hooks, "readBiomeArrayFromPacket", null, null, "(Lnet/minecraft/world/chunk/Chunk;[BI)I"),
+   hooks_writeBiomeArrayToPacket(hooks, "writeBiomeArrayToPacket", null, null, "(Lnet/minecraft/world/chunk/Chunk;[BI)I"),
+   hooks_getBiomeArray(hooks, "getBiomeArray", null, null, "(Lnet/minecraft/world/chunk/Chunk;)[B"),
+   hooks_setBiomeArray(hooks, "setBiomeArray", null, null, "([B)[S"),
+   hooks_create16BArray(hooks, "create16BArray", null, null, "()[S"),
+   hooks_getBlockData(hooks, "getBlockData", null, null, "(Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;)[B"),
+   hooks_setBlockData(hooks, "setBlockData", null, null, "(Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;[BI)V"),
+   hooks_writeChunkBiomeArrayToNbt(hooks, "writeChunkBiomeArrayToNbt", null, null, "(Lnet/minecraft/world/chunk/Chunk;Lnet/minecraft/nbt/NBTTagCompound;)V"),
+   hooks_readChunkBiomeArrayFromNbt(hooks, "readChunkBiomeArrayFromNbt", null, null, "(Lnet/minecraft/world/chunk/Chunk;Lnet/minecraft/nbt/NBTTagCompound;)V"),
+   hooks_writeChunkToNbt(hooks, "writeChunkToNbt", null, null, "(Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;)V"),
+   hooks_readChunkFromNbt(hooks, "readChunkFromNbt", null, null, "(Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;Lnet/minecraft/nbt/NBTTagCompound;)V"),
+   hooks_getBlockId(hooks, "getBlockId", null, null, "(Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;III)I"),
+   hooks_getBlockById(hooks, "getBlock", null, null, "(Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;III)Lnet/minecraft/block/Block;"),
+   hooks_setBlockId(hooks, "setBlockId", null, null, "(Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;IIII)V"),
    biomeGenBase("net/minecraft/world/biome/BiomeGenBase", "ahu"),
    worldChunkManager("net/minecraft/world/biome/WorldChunkManager", "aib"),
    acl("net/minecraft/world/chunk/storage/AnvilChunkLoader", "aqk"),
@@ -41,7 +41,7 @@ public enum Name {
    world("net/minecraft/world/World", "ahb"),
    genLayer("GenLayerRiverMix", "axv"),
    ebs_getBlock(extendedBlockStorage, "getBlockByExtId", "a", "func_150819_a", "(III)Lnet/minecraft/block/Block;"),
-   ebs_setBlock(extendedBlockStorage, "func_150818_a", "a", (String)null, "(IIILnet/minecraft/block/Block;)V"),
+   ebs_setBlock(extendedBlockStorage, "func_150818_a", "a", null, "(IIILnet/minecraft/block/Block;)V"),
    ebs_getBlockLSBArray(extendedBlockStorage, "getBlockLSBArray", "g", "func_76658_g", "()[B"),
    ebs_getBlockMSBArray(extendedBlockStorage, "getBlockMSBArray", "i", "func_76660_i", "()Lnet/minecraft/world/chunk/NibbleArray;"),
    ebs_setBlockMSBArray(extendedBlockStorage, "setBlockMSBArray", "a", "func_76673_a", "(Lnet/minecraft/world/chunk/NibbleArray;)V"),
@@ -56,20 +56,20 @@ public enum Name {
    chunk_getBiomeGenForWorldCoords(chunk, "getBiomeGenForWorldCoords", "a", "func_76591_a", "(IILnet/minecraft/world/biome/WorldChunkManager;)Lnet/minecraft/world/biome/BiomeGenBase;"),
    chunk_getBiomeArray(chunk, "getBiomeArray", "m", "func_76605_m", "()[B"),
    chunk_setBiomeArray(chunk, "setBiomeArray", "a", "func_76616_a", "([B)V"),
-   chunk_getBiomeShortArray(chunk, "getBiomeShortArray", (String)null, (String)null, "()[S"),
-   chunk_setBiomeShortArray(chunk, "setBiomeShortArray", (String)null, (String)null, "([S)V"),
+   chunk_getBiomeShortArray(chunk, "getBiomeShortArray", null, null, "()[S"),
+   chunk_setBiomeShortArray(chunk, "setBiomeShortArray", null, null, "([S)V"),
    chunk_blockBiomeArray(chunk, "blockBiomeArray", "v", "field_76651_r", "[S"),
-   chunk_init(chunk, "<init>", (String)null, (String)null, "(Lnet/minecraft/world/World;II)V"),
+   chunk_init(chunk, "<init>", null, null, "(Lnet/minecraft/world/World;II)V"),
    genLayer_geiInts(genLayer, "getInts", "a", "func_75904_a", "(IIII)[I"),
    anyChunkProvider_provideChunk(anyChunkProvider, "provideChunk", "d", "func_73154_d", "(II)Lnet/minecraft/world/chunk/Chunk;"),
    packet_readPacketData(packet, "readPacketData", "a", "func_148837_a", "(Lnet/minecraft/network/PacketBuffer;)V"),
    nhpc_handleMultiBlockChange(nhpc, "handleMultiBlockChange", "a", "func_147287_a", "(Lnet/minecraft/network/play/server/S22PacketMultiBlockChange;)V"),
-   s22_init_server(s22, "<init>", (String)null, (String)null, "(I[SLnet/minecraft/world/chunk/Chunk;)V"),
-   s21_undefined1(s21, "func_149275_c", "c", (String)null, "()I"),
-   s21_undefined2(s21, "func_149269_a", "a", (String)null, "(Lnet/minecraft/world/chunk/Chunk;ZI)Lnet/minecraft/network/play/server/S21PacketChunkData$Extracted;"),
+   s22_init_server(s22, "<init>", null, null, "(I[SLnet/minecraft/world/chunk/Chunk;)V"),
+   s21_undefined1(s21, "func_149275_c", "c", null, "()I"),
+   s21_undefined2(s21, "func_149269_a", "a", null, "(Lnet/minecraft/world/chunk/Chunk;ZI)Lnet/minecraft/network/play/server/S21PacketChunkData$Extracted;"),
    ub_bud("exterminatorJeff/undergroundBiomes/worldGen/BiomeUndergroundDecorator"),
-   ub_bud_replaceChunkOres_world(ub_bud, "replaceChunkOres", (String)null, (String)null, "(IILnet/minecraft/world/World;)V"),
-   ub_bud_replaceChunkOres_iChunkProvider(ub_bud, "replaceChunkOres", (String)null, (String)null, "(Lnet/minecraft/world/chunk/IChunkProvider;II)V");
+   ub_bud_replaceChunkOres_world(ub_bud, "replaceChunkOres", null, null, "(IILnet/minecraft/world/World;)V"),
+   ub_bud_replaceChunkOres_iChunkProvider(ub_bud, "replaceChunkOres", null, null, "(Lnet/minecraft/world/chunk/IChunkProvider;II)V");
 
    public final Name clazz;
    public final String deobf;
@@ -78,11 +78,11 @@ public enum Name {
    public final String desc;
    public String obfDesc;
 
-   private Name(String deobf) {
+   Name(String deobf) {
       this(deobf, deobf);
    }
 
-   private Name(String deobf, String obf) {
+   Name(String deobf, String obf) {
       this.clazz = null;
       this.deobf = deobf;
       this.obf = obf;
@@ -90,7 +90,7 @@ public enum Name {
       this.desc = null;
    }
 
-   private Name(Name clazz, String deobf, String obf, String srg, String desc) {
+   Name(Name clazz, String deobf, String obf, String srg, String desc) {
       this.clazz = clazz;
       this.deobf = deobf;
       this.obf = obf != null ? obf : deobf;
@@ -177,23 +177,19 @@ public enum Name {
    private static void translateDescs() {
       StringBuilder sb = new StringBuilder();
       Name[] var1 = values();
-      int var2 = var1.length;
 
-      for(int var3 = 0; var3 < var2; ++var3) {
-         Name name = var1[var3];
+      for (Name name : var1) {
          if (name.desc != null) {
             int pos = 0;
 
             int endPos;
-            for(endPos = -1; (pos = name.desc.indexOf(76, pos)) != -1; pos = endPos + 1) {
+            for (endPos = -1; (pos = name.desc.indexOf(76, pos)) != -1; pos = endPos + 1) {
                sb.append(name.desc, endPos + 1, pos);
                endPos = name.desc.indexOf(59, pos + 1);
                String cName = name.desc.substring(pos + 1, endPos);
                Name[] var8 = values();
-               int var9 = var8.length;
 
-               for(int var10 = 0; var10 < var9; ++var10) {
-                  Name name2 = var8[var10];
+               for (Name name2 : var8) {
                   if (name2.deobf.equals(cName)) {
                      cName = name2.obf;
                      break;

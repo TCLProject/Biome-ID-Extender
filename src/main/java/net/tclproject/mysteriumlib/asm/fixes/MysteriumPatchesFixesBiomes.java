@@ -15,6 +15,7 @@ import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 import net.minecraftforge.event.terraingen.ChunkProviderEvent;
 import net.tclproject.biomeidextender.asm.MainTransformer;
+import net.tclproject.biomeidextender.utils.LogHelper;
 import net.tclproject.mysteriumlib.asm.annotations.EnumReturnSetting;
 import net.tclproject.mysteriumlib.asm.annotations.Fix;
 import net.tclproject.mysteriumlib.asm.annotations.ReturnedValue;
@@ -59,7 +60,7 @@ public class MysteriumPatchesFixesBiomes {
 			field.setAccessible(true);
 			return MethodHandles.publicLookup().unreflectGetter(field);
 		} catch (Exception e) {
-			MainTransformer.logger.info("RTG is not installed. RTG Compatibility 1 will not be loaded.");
+			LogHelper.info("RTG is not installed. RTG Compatibility 1 will not be loaded.");
 			return null;
 		}
 	}
@@ -84,7 +85,7 @@ public class MysteriumPatchesFixesBiomes {
 			field2.setAccessible(true);
 			return MethodHandles.publicLookup().unreflectGetter(field2);
 		} catch (Exception e) {
-			MainTransformer.logger.info("RTG is not installed. RTG Compatibility 2 will not be loaded.");
+			LogHelper.info("RTG is not installed. RTG Compatibility 2 will not be loaded.");
 			return null;
 		}
 	}
@@ -149,7 +150,7 @@ public class MysteriumPatchesFixesBiomes {
 					}
 				}
 			}
-			MainTransformer.logger.error("Unable to get suitable biome! Temporarily defaulting to plains.");
+			LogHelper.error("Unable to get suitable biome! Temporarily defaulting to plains.");
 			return 1;
 		}
 		return target.biome[chunkX * 16 + chunkY].baseBiome.biomeID;
