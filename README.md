@@ -1,4 +1,8 @@
-# Biome ID Extender
+This mod is now obsolete due to being merged into https://github.com/FalsePattern/EndlessIDs as of version 1.4.0.
+
+Old readme:
+
+### Biome ID Extender
 
 Biome ID Extender is a minecraft mod for Minecraft Forge 1.7.10 that aims to extend the biome ID limit to allow for more than 256 biomes in the game.
 
