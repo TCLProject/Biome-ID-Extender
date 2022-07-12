@@ -1,6 +1,6 @@
-This mod is now obsolete due to being merged into https://github.com/FalsePattern/EndlessIDs as of version 1.4.0.
+# This mod is now *obsolete* due to being merged into https://github.com/FalsePattern/EndlessIDs as of version 1.4.0.
 
-Old readme:
+### Old readme:
 
 ### Biome ID Extender
 
